@@ -1,0 +1,181 @@
+/*
+---------------------------------------------
+
+GENRES STYLES
+
+---------------------------------------------
+*/
+
+.genres {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/*
+---------------------------------------------
+
+START: Genres list
+
+---------------------------------------------
+*/
+
+.genres-list {
+    display: grid;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    grid-template-columns: 445px 445px 445px;
+    grid-template-rows: 290px 290px;
+    grid-gap: 35px;
+    justify-content: center;
+}
+
+/*
+---------------------------------------------
+
+START: Genres list item
+
+---------------------------------------------
+*/
+
+.genres-list__list-item {
+    display: block;
+    color:white;
+}
+
+/*
+---------------------------------------------
+
+START: Genres list item button
+
+---------------------------------------------
+*/
+
+.genres-list__list-item__button {
+    display: flex;
+    position: relative;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    background-color: white;
+    --list-item--red: #ec1e32;
+    --list-item--lightblue: #9bf1e1;
+    --list-item--orange: #f59c23;
+    --list-item--green: #c3f0c8;
+    --list-item--purple: #f138a5;
+    --list-item--blue: #4100f5;
+    color: inherit;
+    font-size: 18px;
+    text-decoration: none;
+    transition: filter;
+    -webkit-transition: filter;
+    -moz-transition: filter;
+    -ms-transition: filter;
+    -o-transition: filter;
+    transition-duration: .4s;
+}
+
+.genres-list__list-item__button:hover {
+    filter: contrast(1.1);
+    -webkit-filter: contrast(1.1);
+}
+
+.genres-list__list-item__button:active {
+    filter: contrast(0.9);
+    -webkit-filter: contrast(0.9);
+}
+
+.genres-list__list-item__button:visited {
+    color: inherit;
+}
+
+.genres-list__list-item__button::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -0px;
+    right: -25px;
+    width: 156px;
+    height: 156px;
+    transform: rotate(25deg);
+    background-size: cover;
+    background-position: 40% 40%;
+    background-repeat: no-repeat;
+    -webkit-transform: rotate(25deg);
+    -moz-transform: rotate(25deg);
+    -ms-transform: rotate(25deg);
+    -o-transform: rotate(25deg);
+    z-index: 0;
+}
+
+.genres-list__list-item__button--rock {
+    background-color: var(--list-item--red);
+}
+
+.genres-list__list-item__button::after {
+    background-image: url(../../assets/img/genres/rock.jpg);
+}
+
+.genres-list__list-item__button--electro {
+    background-color: var(--list-item--lightblue);
+}
+
+.genres-list__list-item__button--electro::after {
+    background-image: url(../../assets/img/genres/electro.jpg);
+}
+
+.genres-list__list-item__button--hiphop {
+    background-color: var(--list-item--orange);
+}
+
+.genres-list__list-item__button--hiphop::after {
+    background-image: url(../../assets/img/genres/hiphop.jpg);
+}
+
+.genres-list__list-item__button--pop {
+    background-color: var(--list-item--green);
+}
+
+.genres-list__list-item__button--pop::after {
+    background-image: url(../../assets/img/genres/pop.jpg);
+}
+
+.genres-list__list-item__button--rnb {
+    background-color: var(--list-item--purple);
+}
+
+.genres-list__list-item__button--rnb::after {
+    background-image: url(../../assets/img/genres/rnb.jpg);
+}
+
+.genres-list__list-item__button--indie {
+    background-color: var(--list-item--blue);
+}
+
+.genres-list__list-item__button--indie::after {
+    background-image: url(../../assets/img/genres/indie.jpg);
+}
+
+/*
+---------------------------------------------
+
+END: Genres list item button
+
+---------------------------------------------
+
+END: Genres list item
+
+---------------------------------------------
+
+END: Genres list
+
+---------------------------------------------
+*/
