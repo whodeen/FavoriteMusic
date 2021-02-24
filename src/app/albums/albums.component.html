@@ -1,6 +1,17 @@
-<div *ngFor="let album of this.albums" style='color: white'>
-    {{ album.name }}<br>
-    {{ album.artist }}<br>
-    {{ album.id }}<br>
-    {{ album.coverUrl }}<br><br>
-</div>
+<section class="albums">
+    <h2 class="visually-hidden">Albums</h2>
+    <header class="albums-header">\
+        <a routerLink="/" class="albums-header__button">Back</a>
+        <input type="text" class="albums-header__search" name="albums-header__search" id="albums-header__search" placeholder="Search albums">
+        <a routerLink="/albums/favorite" class="albums-header__favorite">Favorite</a>
+    </header>
+    <ul class="albums-list">
+        <li *ngFor="let album of this.albums" class="albums-list__list-item" style="background-image: url({{album.coverUrl}});">
+            <p class="albums-list__list-item__description">
+                <span class="albums-list__list-item__description__album-name">{{album.name}}</span>
+                <span class="albums-list__list-item__description__artist">{{album.artist}}</span>
+                <button type="button" class="albums-list__list-item__description__favorite-button">Mark as favorite</button>
+            </p>
+        </li>
+    </ul>
+</section>
