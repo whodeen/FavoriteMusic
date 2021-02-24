@@ -195,11 +195,9 @@ START: Albums list
     padding: 20px;
     grid-template-columns: 18% 18% 18% 18% 18%;
     grid-template-rows: repeat(auto, 1f);
-    grid-gap: 1.75%;
+    grid-gap: 30px;
     justify-content: center;
     align-items: center;
-    padding-bottom: 450px;
-
 }
 
 /*
@@ -312,13 +310,13 @@ START: Albums list item description favorite button
 .albums-list__list-item__description__favorite-button {
     width: 60px;
     height: 60px;
-    cursor: pointer;
     background-color: transparent;
     background-size: 80%;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     border: none;
     font-size: 0;
+    cursor: pointer;
 }
 
 .albums-list__list-item__description__favorite-button:active,
@@ -340,6 +338,10 @@ START: Albums list item description favorite button icon
     fill: transparent;
     stroke: white;
     stroke-width: 2px;
+}
+
+.albums-list__list-item__description__favorite-button__icon--active {
+    fill: white;
 }
 
 .albums-list__list-item__description__favorite-button:focus > .albums-list__list-item__description__favorite-button__icon,
