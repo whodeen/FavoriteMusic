@@ -20,13 +20,17 @@ export class AlbumsComponent {
       if (genreName == 'favorite') {
         this.albums = this.favoriteService.getFavorites();
       } else {
-        this.albumsService.getAlbumsByGenre(this.genre).subscribe((response: any) =>
-          this.albums = response.albums.album.map((album: any) => this.mapAlbum(album))
+        this.albumsService.getAlbumsByGenre(this.genre).subscribe((response: any) => {
+          this.albums = response.albums.album.map((album: any) => this.mapAlbum(album));
+          this.resultedAlbums = this.albums.slice();
+        }
         );
       }
+
     });
   }
 
+  public resultedAlbums: Album[];
   public albums: Album[];
   private genre: Genre;
 
@@ -42,6 +46,12 @@ export class AlbumsComponent {
 
   public getFavoriteLenght() {
     return this.favoriteService.getLenght();
+  }
+
+  public onSearch($event) {
+    this.resultedAlbums = this.albums.filter(item => 
+      item.name.toLowerCase().includes($event.target.value.toLowerCase())
+    );
   }
 
   private mapAlbum(responce:any) {
