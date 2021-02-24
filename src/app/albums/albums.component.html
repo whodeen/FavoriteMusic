@@ -11,7 +11,7 @@
     </header>
     <ul class="albums-list">
         <li *ngFor="let album of this.albums" class="albums-list__list-item"
-            style="background-image: url({{album.coverUrl}});">
+            style="background-image: url('{{album.coverUrls[2]}}'), url('{{album.coverUrls[3]}}'), url('{{album.coverUrls[1]}}'), url('{{album.coverUrls[0]}}');">
             <p class="albums-list__list-item__description">
                 <span class="albums-list__list-item__description__album-name">{{album.name}}</span>
                 <span class="albums-list__list-item__description__artist">{{album.artist}}</span>

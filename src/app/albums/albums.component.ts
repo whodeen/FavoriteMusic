@@ -15,14 +15,14 @@ export class AlbumsComponent {
     let genreName = this.route.snapshot.params['type'];
     this.genre = Genre[genreName];
 
-    this.albumsService.getAlbumsByGenre(this.genre).subscribe((response: any) => 
+    this.albumsService.getAlbumsByGenre(this.genre).subscribe((response: any) =>
       this.albums = response.albums.album.map((album: any) =>
         new Album(
           album.mbid,
           album.name,
           album.artist.name,
-          album.image.find(image => image.size == 'large')['#text'])
-        )
+          album.image.map(image => image['#text']))
+      )
     );
   }
 
