@@ -2,15 +2,22 @@
     <h2 class="visually-hidden">Albums</h2>
     <header class="albums-header">\
         <a routerLink="/" class="albums-header__button">Back</a>
-        <input type="text" class="albums-header__search" name="albums-header__search" id="albums-header__search" placeholder="Search albums">
-        <a routerLink="/albums/favorite" class="albums-header__favorite">Favorite</a>
+        <input type="text" class="albums-header__search" name="albums-header__search" id="albums-header__search"
+            placeholder="Search albums">
+        <a routerLink="/albums/favorite" class="albums-header__favorite">
+            <svg xmlns="http://www.w3.org/2000/svg" class="albums-header__favorite__icon" viewBox="0 0 24 24"><path d="M12 4.435c-1.989-5.399-12-4.597-12 3.568 0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-8.118-10-8.999-12-3.568z"/></svg>
+            <span class="albums-header__favorite__counter">10</span>
+            Favorite</a>
     </header>
     <ul class="albums-list">
-        <li *ngFor="let album of this.albums" class="albums-list__list-item" style="background-image: url({{album.coverUrl}});">
+        <li *ngFor="let album of this.albums" class="albums-list__list-item"
+            style="background-image: url({{album.coverUrl}});">
             <p class="albums-list__list-item__description">
                 <span class="albums-list__list-item__description__album-name">{{album.name}}</span>
                 <span class="albums-list__list-item__description__artist">{{album.artist}}</span>
-                <button type="button" class="albums-list__list-item__description__favorite-button">Mark as favorite</button>
+                <button type="button" class="albums-list__list-item__description__favorite-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="albums-list__list-item__description__favorite-button__icon" width="24" height="24" viewBox="0 0 24 24"><path d="M12 4.435c-1.989-5.399-12-4.597-12 3.568 0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-8.118-10-8.999-12-3.568z"/></svg>
+                    Mark as favorite</button>
             </p>
         </li>
     </ul>

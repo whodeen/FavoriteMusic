@@ -21,7 +21,7 @@ export class AlbumsComponent {
           album.mbid,
           album.name,
           album.artist.name,
-          album.image.find(image => image.size == 'medium')['#text'])
+          album.image.find(image => image.size == 'large')['#text'])
         )
     );
   }
