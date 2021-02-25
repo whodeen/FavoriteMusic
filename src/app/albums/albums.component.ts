@@ -19,6 +19,7 @@ export class AlbumsComponent {
 
       if (genreName == 'favorite') {
         this.albums = this.favoriteService.getFavorites();
+        this.resultedAlbums = this.albums.slice();
       } else {
         this.albumsService.getAlbumsByGenre(this.genre).subscribe((response: any) => {
           this.albums = response.albums.album.map((album: any) => this.mapAlbum(album));

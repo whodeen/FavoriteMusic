@@ -26,7 +26,7 @@ START: Genres list
     padding: 0;
     margin: 0;
     max-width: 100%;
-    grid-template-columns: 445px 445px 445px;
+    grid-template-columns: 30% 30% 30%;
     grid-template-rows: 290px 290px;
     grid-gap: 35px;
     justify-content: center;
